@@ -31,3 +31,4 @@ function writeData(socket, data){
     })(socket, data);
   }
 }
+console.log('123')
