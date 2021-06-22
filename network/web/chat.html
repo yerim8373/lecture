@@ -17,7 +17,7 @@
   <script>
     var socket = io.connect("http://yerim8373.securekim.com");
     socket.emit("joinRoom", { roomName: "myroom" });
-    socket.on("recMsg", function (data) {
+    socket.on("reqMsg", function (data) {
       console.log(data.comment);
 
       $("#chat").append(data.comment);
