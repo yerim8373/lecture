@@ -11,6 +11,7 @@
       type="button"
       value="msg submit"
       onclick="myOnClick()"
+      onkeyup="enterKey()"
     />
   </body>
   <script>
@@ -25,6 +26,13 @@
       socket.emit("reqMsg", { comment: $("#user").val() });
 
       $("#user").val("");
+    }
+    function enterKey() {
+      if (window.event.keyCode == 13) {
+        socket.emit("reqMsg", { comment: $("#user").val() });
+
+        $("#user").val("");
+      }
     }
   </script>
 </html>
